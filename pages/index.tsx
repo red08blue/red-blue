@@ -8,16 +8,6 @@ import Red from '../components/Red'
 import Auth from '../components/Auth'
 import { useStateValue } from '../context/StateProvider'
 
-
-
-// windows
-// 3f6UTpsvfTrNAnNQShEFp6VUV7sC9SCFV1L242LD2e4V
-// cradle annual display clap isolate hamster chalk game carpet ginger observe minimum
-
-// debian
-// 3JwVXVXwi8hav5MsBxHj96Kar7wuUfsRwj4ePur9b5vk
-//rice voice pass target hawk calm peasant rotate source peanut define stamp
-
 const Home: NextPage = () => {
 
   const [{ user }, dispatch] = useStateValue()
