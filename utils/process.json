@@ -1,0 +1,516 @@
+{
+  "version": "0.1.0",
+  "name": "process",
+  "instructions": [
+    {
+      "name": "createState",
+      "accounts": [
+        {
+          "name": "state",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [],
+      "returns": null
+    },
+    {
+      "name": "createPost",
+      "accounts": [
+        {
+          "name": "state",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "post",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "image",
+          "type": "string"
+        },
+        {
+          "name": "posterName",
+          "type": "string"
+        },
+        {
+          "name": "posterUrl",
+          "type": "string"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "createLike",
+      "accounts": [
+        {
+          "name": "post",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "like",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "likeerName",
+          "type": "string"
+        },
+        {
+          "name": "likeerUrl",
+          "type": "string"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "createChat",
+      "accounts": [
+        {
+          "name": "state",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "chat",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "userName1",
+          "type": "string"
+        },
+        {
+          "name": "userAvatar1",
+          "type": "string"
+        },
+        {
+          "name": "userName2",
+          "type": "string"
+        },
+        {
+          "name": "userAvatar2",
+          "type": "string"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "createMessage",
+      "accounts": [
+        {
+          "name": "chat",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "message",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "senderName",
+          "type": "string"
+        },
+        {
+          "name": "senderAvatar",
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        },
+        {
+          "name": "messageType",
+          "type": "string"
+        }
+      ],
+      "returns": null
+    },
+    {
+      "name": "createBusiness",
+      "accounts": [
+        {
+          "name": "state",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "business",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "userName",
+          "type": "string"
+        },
+        {
+          "name": "userAvatar",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "returns": null
+    }
+  ],
+  "accounts": [
+    {
+      "name": "StateAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "postCount",
+            "type": "u64"
+          },
+          {
+            "name": "chatCount",
+            "type": "u64"
+          },
+          {
+            "name": "businessCount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PostAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "image",
+            "type": "string"
+          },
+          {
+            "name": "posterName",
+            "type": "string"
+          },
+          {
+            "name": "posterUrl",
+            "type": "string"
+          },
+          {
+            "name": "likeCount",
+            "type": "u64"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "postTime",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LikeAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "likeerName",
+            "type": "string"
+          },
+          {
+            "name": "likeerUrl",
+            "type": "string"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "postTime",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChatAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "userName1",
+            "type": "string"
+          },
+          {
+            "name": "userAvatar1",
+            "type": "string"
+          },
+          {
+            "name": "userName2",
+            "type": "string"
+          },
+          {
+            "name": "userAvatar2",
+            "type": "string"
+          },
+          {
+            "name": "messageCount",
+            "type": "u64"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MessageAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "senderName",
+            "type": "string"
+          },
+          {
+            "name": "senderAvatar",
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "type": "string"
+          },
+          {
+            "name": "messageType",
+            "type": "string"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "messageTime",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BusinessAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "userName",
+            "type": "string"
+          },
+          {
+            "name": "userAvatar",
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "businessTime",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "DGSAqH69w6bPthAQojYoNWscJdK4Dww896rwxhuQ4tmh"
+  }
+}
